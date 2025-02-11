@@ -1,16 +1,18 @@
 package entidades;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
-public class Funcionario {
+public class Funcionario extends Pessoa {
 
     private BigDecimal salario;
     private String funcao; 
 
     public Funcionario () {
-
+        super();
     }
 
-    public Funcionario(BigDecimal salario, String funcao) {
+    public Funcionario(String nome, LocalDate dataDeNascimento, BigDecimal salario, String funcao) {
+        super(nome, dataDeNascimento);
         this.salario = salario;
         this.funcao = funcao;
     }
@@ -33,7 +35,7 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario [salario=" + salario + ", funcao=" + funcao + "]";
+        return super.toString() + "Funcionario [salario=" + salario + ", funcao=" + funcao + "]";
     }
 
     
