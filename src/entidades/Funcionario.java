@@ -31,6 +31,11 @@ public class Funcionario {
         this.funcao = funcao;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Funcionario [salario=" + salario + ", funcao=" + funcao + "]";
+    }
 
+    
+    
 }
